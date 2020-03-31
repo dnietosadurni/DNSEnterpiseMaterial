@@ -1,0 +1,33 @@
+<div>
+    <form (ngSubmit)="guardarArticulo( formularioArticulo )" #formularioArticulo="ngForm">
+
+        <mat-form-field floatLabel="auto" hideRequiredMarker appearance="outline">
+            <mat-label>Código</mat-label>
+            <input matInput required minlength="4" maxlength="4" name="codigo" [(ngModel)]=articulo.codigo>
+            <mat-hint align="end">Entrar 4 carácteres</mat-hint>
+        </mat-form-field>
+        <mat-form-field hideRequiredMarker appearance="outline">
+            <mat-label>Modelo</mat-label>
+            <input matInput required name="modelo" [(ngModel)]=articulo.modelo>
+        </mat-form-field>
+        <mat-form-field hideRequiredMarker appearance="outline">
+            <mat-label>Tipo</mat-label>
+            <input matInput required name="tipo" [(ngModel)]=articulo.tipo>
+        </mat-form-field>
+        <mat-form-field hideRequiredMarker appearance="outline">
+            <mat-label>Año</mat-label>
+            <input matInput type="number" required name="anio" [(ngModel)]=articulo.anio>
+        </mat-form-field>
+        <mat-form-field hideRequiredMarker appearance="outline">
+            <mat-label>Marca</mat-label>
+            <mat-select required name="marca" [(ngModel)]=articulo.marca>
+                <mat-option *ngFor="let proveedor of listaProveedores" [value]=proveedor.nombre>{{ proveedor.nombre }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button [disabled]="!formularioArticulo.valid" class="botonGuardarArticulos" mat-raised-button color="primary" type="submit"> Guardar </button>
+        <button [disabled]="!formularioArticulo.valid" type="button" (click)="eliminarArticulo()" class="botonGuardarArticulos" mat-raised-button color="primary">Eliminar Artículo</button>
+
+    </form>
+
+
+</div>

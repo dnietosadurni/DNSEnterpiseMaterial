@@ -1,0 +1,30 @@
+<!-- Botón de alta -->
+
+<button routerLink="/cliente/nuevo" mat-raised-button color="primary" class="botonAltaCliente">Alta Cliente</button>
+
+
+<!-- Lista de clientes -->
+
+<mat-table [dataSource]="dataSource">
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="nombre">
+        <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
+    </ng-container>
+
+    <!-- Pais Column -->
+    <ng-container matColumnDef="pais">
+        <mat-header-cell *matHeaderCellDef> Pais </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.pais}}</mat-cell>
+    </ng-container>
+
+    <!-- Email Column -->
+    <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.email}} <button mat-raised-button color="primary" class="botonEditar" (click)="escogerClienteMaterial( element )">Editar</button> </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>

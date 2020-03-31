@@ -1,0 +1,37 @@
+<!-- Botón de alta -->
+
+<button routerLink="/proveedor/nuevo" mat-raised-button color="primary" class="botonAltaProveedor">
+    Alta Proveedor 
+</button>
+
+<!-- Lista Proveedores -->
+
+<mat-table [dataSource]="dataSource">
+    <!-- Código Column -->
+    <ng-container matColumnDef="codigo">
+        <mat-header-cell *matHeaderCellDef> Código </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.codigo}} </mat-cell>
+    </ng-container>
+
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="nombre">
+        <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.nombre}} </mat-cell>
+    </ng-container>
+
+    <!-- Correo Column -->
+    <ng-container matColumnDef="correo">
+        <mat-header-cell *matHeaderCellDef> Correo </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.correo}}</mat-cell>
+    </ng-container>
+
+    <!-- Pais Column -->
+    <ng-container matColumnDef="pais">
+        <mat-header-cell *matHeaderCellDef> Pais </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.pais}} <button mat-raised-button color="primary" class="botonEditar" (click)="escogerProveedorMaterial( element )">Editar</button> </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>

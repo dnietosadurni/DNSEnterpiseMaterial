@@ -1,0 +1,45 @@
+.mat-header-cell {
+    font-size: 18px;
+    color: white;
+    background-color: #616161;
+}
+
+.mat-cell {
+    font-size: 18px;
+}
+
+.mat-column-codigo {
+    max-width: 120px;
+}
+
+.mat-column-modelo {
+    max-width: 150px;
+}
+
+.mat-column-tipo {
+    max-width: 150px;
+}
+
+.mat-column-anio {
+    max-width: 100px;
+}
+
+.mat-column-marca {
+    justify-content: space-between;
+}
+
+.botonEditar:hover {
+    color: #616161;
+    background-color: rgb(199, 193, 193);
+}
+
+.botonAltaArticulo {
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.botonAltaArticulo:hover {
+    color: #616161;
+    background-color: rgb(199, 193, 193);
+}

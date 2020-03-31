@@ -1,0 +1,42 @@
+.botonAltaCliente {
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.botonAltaCliente:hover {
+    color: #616161;
+    background-color: rgb(199, 193, 193);
+}
+
+.red-snackbar {
+    background-color: rgb(153, 50, 50);
+    color: lightgoldenrodyellow;
+}
+
+.mat-header-cell {
+    font-size: 18px;
+    color: white;
+    background-color: #616161;
+}
+
+.mat-cell {
+    font-size: 18px;
+}
+
+.mat-column-nombre {
+    max-width: 350px;
+}
+
+.mat-column-pais {
+    max-width: 150px;
+}
+
+.mat-column-email {
+    justify-content: space-between;
+}
+
+.botonEditar:hover {
+    color: #616161;
+    background-color: rgb(199, 193, 193);
+}

@@ -1,0 +1,45 @@
+<!-- Botón de alta -->
+
+<button mat-raised-button color="primary" class="botonAltaArticulo" routerLink="/articulo/nuevo">
+    Alta Artículo
+</button>
+
+
+<!-- Lista de articulos -->
+
+<mat-table [dataSource]="dataSource">
+    <!-- Código Column -->
+    <ng-container matColumnDef="codigo">
+        <mat-header-cell *matHeaderCellDef> Código </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.codigo}} </mat-cell>
+    </ng-container>
+
+    <!-- Modelo Column -->
+    <ng-container matColumnDef="modelo">
+        <mat-header-cell *matHeaderCellDef> Modelo </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.modelo}} </mat-cell>
+    </ng-container>
+
+    <!-- Tipo Column -->
+    <ng-container matColumnDef="tipo">
+        <mat-header-cell *matHeaderCellDef> Tipo </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.tipo}}</mat-cell>
+    </ng-container>
+
+    <!-- Año Column -->
+    <ng-container matColumnDef="anio">
+        <mat-header-cell *matHeaderCellDef> Año </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.anio}}</mat-cell>
+    </ng-container>
+
+
+    <!-- Marca y Editar Column  -->
+    <ng-container matColumnDef="marca">
+        <mat-header-cell *matHeaderCellDef> Marca </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.marca}} <button mat-raised-button color="primary" class="botonEditar" (click)="escogerArticuloMaterial( element )">Editar</button> </mat-cell>
+    </ng-container>[
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>

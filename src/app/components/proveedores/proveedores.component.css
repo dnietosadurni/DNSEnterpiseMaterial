@@ -1,0 +1,41 @@
+.ng-invalid.ng-touched:not(form) {
+    border: 1px solid red;
+}
+
+.tableProv {
+    width: 100%;
+}
+
+.mat-header-cell {
+    font-size: 18px;
+    color: white;
+    background-color: #616161;
+}
+
+.mat-cell {
+    font-size: 18px;
+}
+
+.mat-column-pais {
+    justify-content: space-between;
+}
+
+.mat-column-codigo {
+    max-width: 150px;
+}
+
+.botonEditar:hover {
+    color: #616161;
+    background-color: rgb(199, 193, 193);
+}
+
+.botonAltaProveedor {
+    width: 100%;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.botonAltaProveedor:hover {
+    color: #616161;
+    background-color: rgb(199, 193, 193);
+}

@@ -1,0 +1,24 @@
+<div>
+    <form (ngSubmit)="guardarCliente( formularioCliente)" #formularioCliente="ngForm">
+
+        <mat-form-field floatLabel='auto' hideRequiredMarker appearance='outline'>
+            <mat-label>Código Cliente generado automaticamente</mat-label>
+            <input matInput name="codigo" [(ngModel)]=cliente.codigo #codigo="ngModel" disabled>
+        </mat-form-field>
+        <mat-form-field hideRequiredMarker appearance='outline'>
+            <mat-label>Nombre Cliente</mat-label>
+            <input matInput required name="nombre" [(ngModel)]=cliente.nombre #nombre="ngModel">
+        </mat-form-field>
+        <mat-form-field hideRequiredMarker appearance='outline'>
+            <mat-label>Pais Cliente</mat-label>
+            <input matInput required name="pais" [(ngModel)]=cliente.pais #pais="ngModel">
+        </mat-form-field>
+        <mat-form-field hideRequiredMarker appearance='outline'>
+            <mat-label>Email Cliente</mat-label>
+            <input matInput required pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" name="email" [(ngModel)]=cliente.email #email="ngModel">
+        </mat-form-field>
+        <button [disabled]="!formularioCliente.valid" class="botonGuardarCliente" mat-raised-button color="primary" type="submit">Guardar</button>
+        <button [disabled]="!formularioCliente.valid" class="botonGuardarCliente" mat-raised-button color="primary" type="button" (click)="eliminarCliente( cliente )">Eliminar</button>
+
+    </form>
+</div>
